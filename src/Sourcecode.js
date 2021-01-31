@@ -5,7 +5,11 @@ import "./sourcecode.css";
 export default function Sourcecode(){
 return(
 <div className="Sourcecode">
-  Source Code by Lesley Middelkamp
+  <footer>Source Code by Lesley Middelkamp
+  <a 
+  href = "https://github.com/Lesley-Middelkamp/weather-react"
+  target="_blank"> Github</a>
+  </footer>
 </div>
 
 );
