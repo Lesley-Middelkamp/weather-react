@@ -1,4 +1,23 @@
-.Temperature{
+.Temperature {
+  text-align: right;
+  border: 1px solid blue;
+  color: #878787;
+  border-radius: 5px;
+  margin: 30px auto;
+  list-style: none;
+}
+.Temperature h2 {
   text-align: center;
-  
-} 
+}
+
+.Temperature li {
+  font-size: 16px;
+  font-weight: 100;
+  line-height: 30px;
+  margin: 0;
+  padding: 0;
+  list-style: none;
+}
+.col-6 {
+  max-width: 50%;
+}
