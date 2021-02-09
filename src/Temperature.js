@@ -1,7 +1,9 @@
 import React, {useState} from "react";
-import temperature from "./temperature.css";
+import "./temperature.css";
 import axios from "axios";
 import FormattedDate from "./FormattedDate";
+import "WeatherInfo";   
+
 export default function Temperature(props){
   let [ready, setReady]= useState(false)
   let [weatherData, setweatherData]=useState({});
@@ -56,11 +58,7 @@ return(
 </div>
 );
 }else{
-  let apiKey = "37940d0f69b7655af235d93e4d98598f"
- 
-  let apiUrl=`http://api.openweathermap.org/data/2.5/weather?q=${props.defaultCity}&appid=${apiKey}&units=metric `;
-  axios.get(apiUrl).then(handleResponse);
-return "Loading...";  
+  return "Loading...";  
 }
 
 
