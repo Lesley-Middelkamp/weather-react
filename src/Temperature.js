@@ -20,6 +20,7 @@ export default function Temperature(props){
     })
     setReady(true)
   }
+  return null;
 
   
 
