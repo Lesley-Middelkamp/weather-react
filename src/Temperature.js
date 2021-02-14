@@ -66,8 +66,8 @@ export default function Temperature(props){
       </div>
     );
   } else {
-    
-    return null
+    search();
+    return "Loading..";
   }
 }
 }
