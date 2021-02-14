@@ -12,6 +12,7 @@ export default function Temperature(props){
   function handleResponse(response){
     console.log(response.data);
     setweatherData({
+      Ready: true,
       temperature:response.data.main.temp,
       humidity: response.data.main.humidity,
       wind:response.data.wind.speed,
@@ -19,8 +20,8 @@ export default function Temperature(props){
       description:response.data.weather[0].description,
       iconUrl:`http://openweathermap.org/img/wn/${response.data.weather[0].icon}@2x.png`,
       date: new Date (response.data.dt *1000)
-    })
-    setReady(true)
+    });
+    
   }
     function handleSubmit(event) {
     event.preventDefault();
@@ -32,11 +33,13 @@ export default function Temperature(props){
   }
 
   function search() {
-    const apiKey = "5f472b7acba333cd8a035ea85a0d4d4c";
+    const apiKey = "37940d0f69b7655af235d93e4d98598f";
     let apiUrl = `https://api.openweathermap.org/data/2.5/weather?q=${city}&appid=${apiKey}&units=metric`;
-    axios.get(apiUrl).then(handleResponse);
+  axios.get(apiUrl).then(handleResponse);
+    
+    
   if (weatherData.ready) {
-    return (
+    return  (
       <div className="Weather">
         <form onSubmit={handleSubmit}>
           <div className="row">
@@ -63,8 +66,8 @@ export default function Temperature(props){
       </div>
     );
   } else {
-    search();
-    return "Loading...";
+    
+    return null
   }
 }
 }
