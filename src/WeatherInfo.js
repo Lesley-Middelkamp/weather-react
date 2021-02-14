@@ -25,7 +25,7 @@ return(
   </div>
 
 <div className="col-6">
-  <ul>
+<ul>
 <li>Humidity: {props.data.humidity} %</li>
 <li>Wind: {props.data.wind}  km/h</li>
 <li>Precipitation %</li>
@@ -36,3 +36,5 @@ return(
 </div>
 );
 }
+
+

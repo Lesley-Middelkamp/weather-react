@@ -2,7 +2,7 @@ import React, {useState} from "react";
 import "./temperature.css";
 import axios from "axios";
 import FormattedDate from "./FormattedDate";
-import "WeatherInfo";   
+
 
 export default function Temperature(props){
   let [ready, setReady]= useState(false)
@@ -21,45 +21,9 @@ export default function Temperature(props){
     setReady(true)
   }
 
-  if(ready){
-return(
-     <div className="Temperature">
- 
-<h2> {weatherData.city}</h2>
-<ul>
-<li> 
-  <FormattedDate date= {weatherData.date}/>
- </li>
-<li className= "text-capitalize">
-   {weatherData.description}</li>
- </ul>
- <div className="row">
-  <div className="col-6">
-   <img className= "text-capitalize"
-   src={weatherData.iconUrl}
-   alt  ={weatherData.description}
-   />
-<div className="float-left">
-  <span className= "temperature">
-    {Math.round(weatherData.temperature)}
-  </span>
-  <span className="unit">℃</span>
-  </div>
+  
 
-<div className="col-6">
-  <ul>
-<li>Humidity: {weatherData.humidity} %</li>
-<li>Wind: {weatherData.wind}  km/h</li>
-<li>Precipitation %</li>
-</ul>
-</div>
-</div>
-</div>
-</div>
-);
-}else{
-  return "Loading...";  
-}
+
 
 
 
