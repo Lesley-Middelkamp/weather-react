@@ -1,21 +1,20 @@
+  
 import React from "react";
-import "./styles.css";
-
-import Temperature from "./Temperature";
-import CelFarh from "./CelFarh";
-import WeatherInfo from "./WeatherInfo";
-import Sourcecode from "./Sourcecode";
+import Weather from "./Weather";
+import "./App.css";
 
 export default function App() {
   return (
     <div className="App">
       <div className="container">
-    
-      <Temperature defaultCity= "New York"  />
-      <CelFarh />
-      <Sourcecode />
-      
-    </div>
+        <Weather defaultCity="Ripley" />
+
+  <footer>Source Code by Lesley Middelkamp
+  <a 
+  href = "https://github.com/Lesley-Middelkamp/weather-react"
+  target="_blank"> Github</a>
+  </footer>
+      </div>
     </div>
   );
 }
